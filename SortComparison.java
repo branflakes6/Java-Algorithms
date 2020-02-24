@@ -17,10 +17,20 @@ class SortComparison {
      * @return array sorted in ascending order.
      *
      */
-    static double [] insertionSort (double a[]){
-
-        //todo: implement the sort
-    }//end insertionsort
+    static double [] insertionSort (double a[])
+    {
+        for (int i = 1; i < a.length; ++i) {
+            double temp = a[i];
+            int j = i - 1;
+            while (j >= 0 && a[j] > temp)
+            {
+            a[j+1] = a[j];
+            j = j - 1;
+            }
+            a[j+1] = temp;
+        }
+        return a;
+    }
 
     /**
      * Sorts an array of doubles using Selection Sort.
