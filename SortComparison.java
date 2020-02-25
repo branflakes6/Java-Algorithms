@@ -66,10 +66,39 @@ class SortComparison {
      *
      */
     static double [] quickSort (double a[]){
+        quickSort(a, 0, a.length - 1);
+        return a;
+    }
 
-        //todo: implement the sort
+    private static void quickSort(double a[], int lo, int hi)
+    {
+        if (lo < hi)
+        {
+            int piv = partition(a, lo, hi);
+            quickSort(a, lo, piv-1);
+            quickSort(a, piv+1, hi);
+        }
+    }
+    private static int partition(double a[], int lo, int hi)
+    {
+        double pivot = a[hi];
+        int i = (lo-1);
+        for (int j=lo; j<hi; j++)
+        {
+            if (a[j] < pivot)
+            {
+                i++;
+                double temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+        double temp = a[i+1];
+        a[i+1] = a[hi];
+        a[hi] = temp;
+        return i+1;
+    }
 
-    }//end quicksort
 
     /**
      * Sorts an array of doubles using Merge Sort.
