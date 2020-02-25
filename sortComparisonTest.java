@@ -30,7 +30,6 @@ public class sortComparisonTest
         double[] b = new double[] {1.56,2.34,3.2,4.2,5.1,6.12,8.9} ;
         assertArrayEquals(SortComparison.insertionSort(a),b, 0);
     }
-
     @Test
     public void testSelectionSort()
     {
@@ -38,7 +37,6 @@ public class sortComparisonTest
         double[] b = new double[] {1.56,2.34,3.2,4.2,5.1,6.12,8.9} ;
         assertArrayEquals(SortComparison.selectionSort(a),b, 0);
     }
-
     @Test
     public void testQuickSort()
     {

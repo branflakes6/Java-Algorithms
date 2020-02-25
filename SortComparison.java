@@ -117,10 +117,45 @@ class SortComparison {
      */
 
     static double[] mergeSortIterative(double[] a) {
-        return a;
+        if (a != null) {
+            int low = 0;
+            int high = a.length - 1;
+            double[] temp = new double[a.length];
+            for(int i = 0; i < a.length; i++)
+            {
+                temp[i] = a[i];
+            }
+
+            for (int m = 1; m <= high - low; m = 2 * m) {
+                for (int bottom = low; bottom < high; bottom += 2 * m) {
+                    int mid = bottom + m - 1;
+                    int top = bottom + 2 * m - 1;
+
+                    merge(a, temp, bottom, mid, (top < high) ? top : high);
+                }
+            }
+            return a;
+        } else {
+            return null;
+        }
     }
 
-
+    private static void merge(double[] a, double[] temp, int bottom, int mid, int top) {
+        int k = bottom, i = bottom, j = mid + 1;
+        while (i <= mid && j <= top) {
+            if (a[i] < a[j]) {
+                temp[k++] = a[i++];
+            } else {
+                temp[k++] = a[j++];
+            }
+        }
+        while (i <= mid && i < a.length) {
+            temp[k++] = a[i++];
+        }
+        for (i = bottom; i <= top; i++) {
+            a[i] = temp[i];
+        }
+    }
 
 
     /**
@@ -188,8 +223,6 @@ class SortComparison {
             k++;
         }
     }
-
-
 
     public static void main(String[] args) {
 
