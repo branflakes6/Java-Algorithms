@@ -4,7 +4,7 @@
  *  This class contains static methods that implementing sorting of an array of numbers
  *  using different sort algorithms.
  *
- *  @author
+ *  @author Brian Farrell
  *  @version HT 2020
  */
 
@@ -79,6 +79,7 @@ class SortComparison {
             quickSort(a, piv+1, hi);
         }
     }
+
     private static int partition(double a[], int lo, int hi)
     {
         double pivot = a[hi];
@@ -117,9 +118,9 @@ class SortComparison {
 
     static double[] mergeSortIterative (double a[]) {
 
-        //todo: implement the sort
 
-    }//end mergesortIterative
+        return a;
+    }
 
 
 
@@ -133,19 +134,13 @@ class SortComparison {
     static double[] mergeSortRecursive (double a[]) {
 
 
-        //todo: implement the sort
-
-    }//end mergeSortRecursive
-
-
-
-
+        return a;
+    }
 
 
 
     public static void main(String[] args) {
 
-        //todo: do experiments as per assignment instructions
     }
 
-}//end class
+}
