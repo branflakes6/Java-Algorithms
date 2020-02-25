@@ -116,11 +116,10 @@ class SortComparison {
      * @return after the method returns, the array must be in ascending sorted order.
      */
 
-    static double[] mergeSortIterative (double a[]) {
-
-
+    static double[] mergeSortIterative(double[] a) {
         return a;
     }
+
 
 
 
@@ -131,10 +130,63 @@ class SortComparison {
      * @param a: An unsorted array of doubles.
      * @return after the method returns, the array must be in ascending sorted order.
      */
-    static double[] mergeSortRecursive (double a[]) {
-
-
+    static double[] mergeSortRecursive (double a[])
+    {
+        mergeSortRecursive(a, 0, a.length-1);
         return a;
+    }
+    private  static void mergeSortRecursive (double[] a,  int lo, int hi)
+    {
+        if (lo < hi)
+        {
+            int mid = (lo+hi)/2;
+            mergeSortRecursive(a, lo, mid);
+            mergeSortRecursive(a , mid+1, hi);
+            merge(a, lo, mid, hi);
+        }
+    }
+    private static void merge(double a[], int left, int mid, int right)
+    {
+        int n1 = mid - left + 1;
+        int n2 = right - mid;
+        double leftArr[] = new double [n1];
+        double rightArr[] = new double [n2];
+        for (int i=0; i<n1; ++i)
+        {
+            leftArr[i] = a[left + i];
+        }
+        for (int j=0; j<n2; ++j)
+        {
+            rightArr[j] = a[mid + 1 + j];
+        }
+        int i = 0, j = 0;
+        int k = left;
+        while (i < n1 && j < n2)
+        {
+            if (leftArr[i] <= rightArr[j])
+            {
+                a[k] = leftArr[i];
+                i++;
+            }
+            else
+             {
+                a[k] = rightArr[j];
+                j++;
+             }
+                k++;
+        }
+        while (i < n1)
+        {
+            a[k] = leftArr[i];
+            i++;
+            k++;
+        }
+        while (j < n2)
+        {
+            a[k] = rightArr[j];
+            j++;
+            k++;
+        }
     }
 
 
