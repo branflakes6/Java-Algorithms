@@ -121,17 +121,12 @@ class SortComparison {
             int low = 0;
             int high = a.length - 1;
             double[] temp = new double[a.length];
-            for(int i = 0; i < a.length; i++)
-            {
-                temp[i] = a[i];
-            }
-
+            System.arraycopy(a, 0, temp, 0, a.length);
             for (int m = 1; m <= high - low; m = 2 * m) {
                 for (int bottom = low; bottom < high; bottom += 2 * m) {
                     int mid = bottom + m - 1;
                     int top = bottom + 2 * m - 1;
-
-                    merge(a, temp, bottom, mid, (top < high) ? top : high);
+                    merge(a, temp, bottom, mid, Math.min(top, high));
                 }
             }
             return a;
@@ -184,12 +179,9 @@ class SortComparison {
     {
         int n1 = mid - left + 1;
         int n2 = right - mid;
-        double leftArr[] = new double [n1];
-        double rightArr[] = new double [n2];
-        for (int i=0; i<n1; ++i)
-        {
-            leftArr[i] = a[left + i];
-        }
+        double[] leftArr = new double [n1];
+        double[] rightArr = new double [n2];
+        System.arraycopy(a, left, leftArr, 0, n1);
         for (int j=0; j<n2; ++j)
         {
             rightArr[j] = a[mid + 1 + j];
