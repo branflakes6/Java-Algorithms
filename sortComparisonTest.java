@@ -26,13 +26,23 @@ public class sortComparisonTest {
     public void testConstructor() {
         new SortComparison();
     }
-
+    @Test
+    public void testEmpty()
+    {
+        double [] a = new double [] {};
+        assertArrayEquals(new double[0], SortComparison.insertionSort(a), 0);
+        assertArrayEquals(new double[0], SortComparison.selectionSort(a), 0);
+        assertArrayEquals(new double[0], SortComparison.mergeSortIterative(a), 0);
+        assertArrayEquals(new double[0], SortComparison.mergeSortRecursive(a), 0);
+        assertArrayEquals(new double[0], SortComparison.quickSort(a), 0);
+    }
     @Test
     public void testInsertionSort() {
         double[] a = new double[]{3.2, 5.1, 1.56, 2.34, 8.9, 6.12, 4.2};
         double[] b = new double[]{1.56, 2.34, 3.2, 4.2, 5.1, 6.12, 8.9};
         assertArrayEquals(SortComparison.insertionSort(a), b, 0);
-        assertNull(SortComparison.insertionSort(null));
+        a = null;
+        assertNull(SortComparison.insertionSort(a));
     }
 
     @Test
@@ -40,7 +50,8 @@ public class sortComparisonTest {
         double[] a = new double[]{3.2, 5.1, 1.56, 2.34, 8.9, 6.12, 4.2};
         double[] b = new double[]{1.56, 2.34, 3.2, 4.2, 5.1, 6.12, 8.9};
         assertArrayEquals(SortComparison.selectionSort(a), b, 0);
-        assertNull(SortComparison.insertionSort(null));
+        a = null;
+        assertNull(SortComparison.insertionSort(a));
     }
 
     @Test
@@ -48,7 +59,8 @@ public class sortComparisonTest {
         double[] a = new double[]{3.2, 5.1, 1.56, 2.34, 8.9, 6.12, 4.2};
         double[] b = new double[]{1.56, 2.34, 3.2, 4.2, 5.1, 6.12, 8.9};
         assertArrayEquals(SortComparison.quickSort(a), b, 0);
-        assertNull(SortComparison.insertionSort(null));
+        a = null;
+        assertNull(SortComparison.insertionSort(a));
     }
 
     @Test
@@ -56,7 +68,8 @@ public class sortComparisonTest {
         double[] a = new double[]{3.2, 5.1, 1.56, 2.34, 8.9, 6.12, 4.2};
         double[] b = new double[]{1.56, 2.34, 3.2, 4.2, 5.1, 6.12, 8.9};
         assertArrayEquals(SortComparison.mergeSortIterative(a), b, 0);
-        assertNull(SortComparison.insertionSort(null));
+        a = null;
+        assertNull(SortComparison.insertionSort(a));
     }
 
     @Test
@@ -64,7 +77,8 @@ public class sortComparisonTest {
         double[] a = new double[]{3.2, 5.1, 1.56, 2.34, 8.9, 6.12, 4.2};
         double[] b = new double[]{1.56, 2.34, 3.2, 4.2, 5.1, 6.12, 8.9};
         assertArrayEquals(SortComparison.mergeSortRecursive(a), b, 0);
-        assertNull(SortComparison.insertionSort(null));
+        a = null;
+        assertNull(SortComparison.insertionSort(a));
     }
     public static void main(String[] args)
     {

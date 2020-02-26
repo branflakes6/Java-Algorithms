@@ -120,7 +120,6 @@ class SortComparison {
      */
     static double [] selectionSort (double a[])
     {
-        if(a != null) {
             for (int i = 0; i < a.length - 1; i++) {
                 int index = i;
                 for (int j = i + 1; j < a.length; j++) {
@@ -134,8 +133,6 @@ class SortComparison {
             }
             return a;
         }
-        return null;
-    }
 
     /**
      * Sorts an array of doubles using Quick Sort.
@@ -145,11 +142,8 @@ class SortComparison {
      *
      */
     static double [] quickSort (double a[]){
-        if(a!=null) {
             quickSort(a, 0, a.length - 1);
             return a;
-        }
-        return null;
     }
 
     private static void quickSort(double a[], int lo, int hi)
@@ -199,7 +193,6 @@ class SortComparison {
      */
 
     static double[] mergeSortIterative(double[] a) {
-        if (a != null) {
             int low = 0;
             int high = a.length - 1;
             double[] temp = new double[a.length];
@@ -212,10 +205,7 @@ class SortComparison {
                 }
             }
             return a;
-        } else {
-            return null;
         }
-    }
 
     private static void merge(double[] a, double[] temp, int bottom, int mid, int top) {
         int k = bottom, i = bottom, j = mid + 1;
@@ -244,11 +234,8 @@ class SortComparison {
      */
     static double[] mergeSortRecursive (double a[])
     {
-        if(a != null) {
             mergeSortRecursive(a, 0, a.length - 1);
             return a;
-        }
-        return null;
     }
     private  static void mergeSortRecursive (double[] a,  int lo, int hi)
     {
