@@ -1,49 +1,75 @@
 // -------------------------------------------------------------------------
 /**
- It took 0.0108ms to run numbers10.txt using selectionSort
- It took 0.2259ms to run numbers100.txt using selectionSort
- It took 14.2167ms to run numbers1000.txt using selectionSort
- It took 2.4777ms to run numbers1000Duplicates.txt using selectionSort
- It took 2.3665ms to run numbersNearlyOrdered1000.txt using selectionSort
- It took 3.9727ms to run numbersReverse1000.txt using selectionSort
- It took 9.203ms to run numbersSorted1000.txt using selectionSort
+ It took 0.0203ms to run numbers10.txt using selectionSort
+ It took 0.2157ms to run numbers100.txt using selectionSort
+ It took 15.4067ms to run numbers1000.txt using selectionSort
+ It took 3.4795ms to run numbers1000Duplicates.txt using selectionSort
+ It took 0.8138ms to run numbersNearlyOrdered1000.txt using selectionSort
+ It took 1.0482ms to run numbersReverse1000.txt using selectionSort
+ It took 0.9378ms to run numbersSorted1000.txt using selectionSort
 
 
- It took 0.0129ms to run numbers10.txt using insertionSort
- It took 0.1356ms to run numbers100.txt using insertionSort
- It took 6.7589ms to run numbers1000.txt using insertionSort
- It took 2.344ms to run numbers1000Duplicates.txt using insertionSort
- It took 0.4139ms to run numbersNearlyOrdered1000.txt using insertionSort
- It took 2.9756ms to run numbersReverse1000.txt using insertionSort
- It took 0.0083ms to run numbersSorted1000.txt using insertionSort
+ It took 0.0132ms to run numbers10.txt using insertionSort
+ It took 0.1439ms to run numbers100.txt using insertionSort
+ It took 11.7273ms to run numbers1000.txt using insertionSort
+ It took 0.7021ms to run numbers1000Duplicates.txt using insertionSort
+ It took 0.3868ms to run numbersNearlyOrdered1000.txt using insertionSort
+ It took 4.8198ms to run numbersReverse1000.txt using insertionSort
+ It took 0.0062ms to run numbersSorted1000.txt using insertionSort
 
 
- It took 0.0902ms to run numbers10.txt using mergeSortIterative
- It took 0.0938ms to run numbers100.txt using mergeSortIterative
- It took 0.7587ms to run numbers1000.txt using mergeSortIterative
- It took 0.6657ms to run numbers1000Duplicates.txt using mergeSortIterative
- It took 2.6084ms to run numbersNearlyOrdered1000.txt using mergeSortIterative
- It took 0.2925ms to run numbersReverse1000.txt using mergeSortIterative
- It took 0.2562ms to run numbersSorted1000.txt using mergeSortIterative
+ It took 0.1232ms to run numbers10.txt using mergeSortIterative
+ It took 0.1579ms to run numbers100.txt using mergeSortIterative
+ It took 1.0051ms to run numbers1000.txt using mergeSortIterative
+ It took 0.408ms to run numbers1000Duplicates.txt using mergeSortIterative
+ It took 0.341ms to run numbersNearlyOrdered1000.txt using mergeSortIterative
+ It took 0.3421ms to run numbersReverse1000.txt using mergeSortIterative
+ It took 0.287ms to run numbersSorted1000.txt using mergeSortIterative
 
 
- It took 0.0285ms to run numbers10.txt using mergeSortRecursive
- It took 0.1321ms to run numbers100.txt using mergeSortRecursive
- It took 1.2591ms to run numbers1000.txt using mergeSortRecursive
- It took 0.4936ms to run numbers1000Duplicates.txt using mergeSortRecursive
- It took 0.353ms to run numbersNearlyOrdered1000.txt using mergeSortRecursive
- It took 0.3211ms to run numbersReverse1000.txt using mergeSortRecursive
- It took 0.3439ms to run numbersSorted1000.txt using mergeSortRecursive
+ It took 0.0395ms to run numbers10.txt using mergeSortRecursive
+ It took 0.2225ms to run numbers100.txt using mergeSortRecursive
+ It took 1.6326ms to run numbers1000.txt using mergeSortRecursive
+ It took 0.5246ms to run numbers1000Duplicates.txt using mergeSortRecursive
+ It took 0.357ms to run numbersNearlyOrdered1000.txt using mergeSortRecursive
+ It took 0.3488ms to run numbersReverse1000.txt using mergeSortRecursive
+ It took 0.3132ms to run numbersSorted1000.txt using mergeSortRecursive
 
 
- It took 0.0213ms to run numbers10.txt using quickSort
- It took 0.0483ms to run numbers100.txt using quickSort
- It took 1.2804ms to run numbers1000.txt using quickSort
- It took 0.2371ms to run numbers1000Duplicates.txt using quickSort
- It took 0.8098ms to run numbersNearlyOrdered1000.txt using quickSort
- It took 4.6526ms to run numbersReverse1000.txt using quickSort
- It took 1.6836ms to run numbersSorted1000.txt using quickSort
+ It took 0.0227ms to run numbers10.txt using quickSort
+ It took 0.0582ms to run numbers100.txt using quickSort
+ It took 0.8999ms to run numbers1000.txt using quickSort
+ It took 0.9868ms to run numbers1000Duplicates.txt using quickSort
+ It took 0.2611ms to run numbersNearlyOrdered1000.txt using quickSort
+ It took 2.84ms to run numbersReverse1000.txt using quickSort
+ It took 3.2433ms to run numbersSorted1000.txt using quickSort
 
+
+ a. Which of the sorting algorithms does the order of input have an impact on? Why?
+    When comparing the run times of the tests all of the algorithms have some impact from order of input but
+    the greatest impact is seen in insertionSort and selectionSort which have massive differences in time
+    between nummbers1000 and reverseNumbers1000. Of these two Selection Sort has the biggest difference.
+
+ b. Which algorithm has the biggest difference between the best and worst performance, based
+ on the type of input, for the input of size 1000? Why?
+    Selection sort has the largest differnece between its worst and best run, Insertion Sort is close and is noticable as it is very slow for files of size 1000
+    expcepted for in the case where the fie is already sorted in which case it is the fastest algorithm.
+
+ c. Which algorithm has the best/worst scalability, i.e., the difference in performance time
+ based on the input size? Please consider only input files with random order for this answer.
+    Selection Sort as it has the worst run time for the largest input file.
+
+ d. Did you observe any difference between iterative and recursive implementations of merge
+ sort? There is very little noticeable difference between the two
+
+ e. Which algorithm is the fastest for each of the 7 input files?
+ For numnbers10.txt the fastest is insertionSort
+ For numnbers100.txt the fastest is quickSort
+ For numnbers1000.txt the fastest is quickSort
+ For numnbers1000Duplicates.txt the fastest is quickSort
+ for numbersNearlyOrdered1000.txt the fastest is quickSort
+ For numnbersReverse1000.txt the fastest is mergeSortIterative
+ For numnbersSorted1000.txt the fastest is insertionSort
  */
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -272,129 +298,6 @@ class SortComparison {
             a[k] = rightArr[j];
             j++;
             k++;
-        }
-    }
-    public static void main(String[] args) {
-        String[] tests = new String[]{"C:/Users/brian/Downloads/assignment input data files/numbers10.txt",
-                "C:/Users/brian/Downloads/assignment input data files/numbers100.txt",
-                "C:/Users/brian/Downloads/assignment input data files/numbers1000.txt",
-                "C:/Users/brian/Downloads/assignment input data files/numbers1000Duplicates.txt",
-                "C:/Users/brian/Downloads/assignment input data files/numbersNearlyOrdered1000.txt",
-                "C:/Users/brian/Downloads/assignment input data files/numbersReverse1000.txt",
-                "C:/Users/brian/Downloads/assignment input data files/numbersSorted1000.txt"};
-            for (String file : tests) {
-            ArrayList<Double> numbers = new ArrayList<>();
-            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-                String line = br.readLine();
-                while (line != null) {
-                    line = br.readLine();
-                    if (line != null) numbers.add(Double.parseDouble(line));
-                }
-                double[] a = new double[numbers.size()];
-                for (int j = 0; j < a.length; j++) {
-                    a[j] = numbers.get(j);
-                }
-                double start = System.nanoTime();
-                selectionSort(a);
-                double end = System.nanoTime();
-                double total = (end - start) / 1000000;
-                System.out.println("It took " + total + "ms" + " to run " + file.split("/")[file.split("/").length - 1] + " using selectionSort");
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-            System.out.println("\n");
-        for (String file : tests) {
-            ArrayList<Double> numbers = new ArrayList<>();
-            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-                String line = br.readLine();
-                while (line != null) {
-                    line = br.readLine();
-                    if (line != null) numbers.add(Double.parseDouble(line));
-                }
-                double[] a = new double[numbers.size()];
-                for (int j = 0; j < a.length; j++) {
-                    a[j] = numbers.get(j);
-                }
-                double start = System.nanoTime();
-                insertionSort(a);
-                double end = System.nanoTime();
-                double total = (end - start) / 1000000;
-                System.out.println("It took " + total + "ms" + " to run " + file.split("/")[file.split("/").length - 1] + " using insertionSort");
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("\n");
-        for (String file : tests) {
-            ArrayList<Double> numbers = new ArrayList<>();
-            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-                String line = br.readLine();
-                while (line != null) {
-                    line = br.readLine();
-                    if (line != null) numbers.add(Double.parseDouble(line));
-                }
-                double[] a = new double[numbers.size()];
-                for (int j = 0; j < a.length; j++) {
-                    a[j] = numbers.get(j);
-                }
-                double start = System.nanoTime();
-                mergeSortIterative(a);
-                double end = System.nanoTime();
-                double total = (end - start) / 1000000;
-                System.out.println("It took " + total + "ms" + " to run " + file.split("/")[file.split("/").length - 1] + " using mergeSortIterative");
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("\n");
-        for (String file : tests) {
-            ArrayList<Double> numbers = new ArrayList<>();
-            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-                String line = br.readLine();
-                while (line != null) {
-                    line = br.readLine();
-                    if (line != null) numbers.add(Double.parseDouble(line));
-                }
-                double[] a = new double[numbers.size()];
-                for (int j = 0; j < a.length; j++) {
-                    a[j] = numbers.get(j);
-                }
-                double start = System.nanoTime();
-                mergeSortRecursive(a);
-                double end = System.nanoTime();
-                double total = (end - start) / 1000000;
-                System.out.println("It took " + total + "ms" + " to run " + file.split("/")[file.split("/").length - 1] + " using mergeSortRecursive");
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("\n");
-        for (String file : tests) {
-            ArrayList<Double> numbers = new ArrayList<>();
-            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-                String line = br.readLine();
-                while (line != null) {
-                    line = br.readLine();
-                    if (line != null) numbers.add(Double.parseDouble(line));
-                }
-                double[] a = new double[numbers.size()];
-                for (int j = 0; j < a.length; j++) {
-                    a[j] = numbers.get(j);
-                }
-                double start = System.nanoTime();
-                quickSort(a);
-                double end = System.nanoTime();
-                double total = (end - start) / 1000000;
-                System.out.println("It took " + total + "ms" + " to run " + file.split("/")[file.split("/").length - 1] + " using quickSort");
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
     }
 }

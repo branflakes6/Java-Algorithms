@@ -67,7 +67,8 @@ public class sortComparisonTest {
         assertNull(SortComparison.insertionSort(null));
     }
     public static void main(String[] args)
-    {String[] tests = new String[]{"C:/Users/brian/Downloads/assignment input data files/numbers10.txt",
+    {
+        String[] tests = new String[]{"C:/Users/brian/Downloads/assignment input data files/numbers10.txt",
             "C:/Users/brian/Downloads/assignment input data files/numbers100.txt",
             "C:/Users/brian/Downloads/assignment input data files/numbers1000.txt",
             "C:/Users/brian/Downloads/assignment input data files/numbers1000Duplicates.txt",
